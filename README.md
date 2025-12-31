@@ -10,3 +10,7 @@ I personally love the terminal aeshteic, and this is the first part in my goal t
 
 This is a smaller step in a bigger project! Look out For it!
 
+## How To Use?
+Basically write any name to create a folder and that is where the cover is going to be stored
+then It asks for the directory with the music. You can put whatever u want
+Then for the name, put the complete name NO SPACES(if ur song has a space the rename it) and include the extention .mp3 at the end
