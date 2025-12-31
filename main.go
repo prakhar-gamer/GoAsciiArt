@@ -5,8 +5,6 @@ import (
 	"image"
 	"image/color"
 	_ "image/jpeg"
-	"log"
-	"net/http"
 	_ "image/png"
 	"os"
 	"path/filepath"
@@ -17,30 +15,6 @@ import (
 )
 
 func main() {
-	// Run the web server in a goroutine
-	go runWebServer()
-
-	// Run the original CLI application
-	runCLI()
-}
-
-func runWebServer() {
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
-	}
-
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Health check passed")
-	})
-
-	log.Printf("Starting web server on port %s", port)
-	if err := http.ListenAndServe(":"+port, nil); err != nil {
-		log.Fatal(err)
-	}
-}
-
-func runCLI() {
 	//sets the directory for the location of the files
 	homeBase := createMainDir()
 
